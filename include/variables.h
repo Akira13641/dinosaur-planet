@@ -51,15 +51,15 @@ typedef struct TActor {
 	Vec3f positionMirror3; //not sure why.
 	float unk0x98;
 	float unk0x9c;
-	u8 someColor1[4];
-	float someVector[3];
-	u8 someColor2[4];
-	u8 someColor3[4];
+	u8 someColor1[4]; //consistently a valid color that makes sense relative to the actor's name
+	float someVector[3]; //no other data type is consistently meaningful in this position
+	u8 someColor2[4]; //consistently a valid color that makes sense relative to the actor's name
+	u8 someColor3[4]; //consistently a valid color that makes sense relative to the actor's name
 	void* CharData; //0x8c1+ struct, has various player data.
 	void* ptr0xbc;
 	void* ptr0xc0;
 	void* ptr0xc4;
-	struct TActor* uniqueWeapon;
+	struct TActor* uniqueWeapon; //always points to "staff" for Krystal and "sword" for Fox/Sabre
 	void* ptr0xcc;
 } TActor; //may be bigger, will know when constructor is understood.
 
