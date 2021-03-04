@@ -51,7 +51,7 @@ typedef struct TActor {
 	Vec3f positionMirror3; //not sure why.
 	float unk0x98;
 	float unk0x9c;
-	u8 animationFlags[4]; //element 3 toggles arm movement, element 4 toggles weapon sheathing
+	u8 animationFlags[4]; //3rd element toggles arm movement, 4th element toggles weapon sheathing
 	float some2DVector[2]; //no other data type is consistently meaningful in this position
 	u8 someFlags1[4]; //almost certainly gameplay flags, changing some triggers "thread 3"
 	u8 someFlags2[4]; //almost certainly gameplay flags, changing some triggers "thread 3"
