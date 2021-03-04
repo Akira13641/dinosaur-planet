@@ -16,7 +16,7 @@ typedef float Vec3[3];
 typedef float Vec4[4];
 
 //prelimnary, lots of unknowns
-//contains pointer-to-own-type fields, so `typedef struct _TActor {`
+//contains pointer-to-own-type fields, so `typedef struct TActor {`
 //must be used instead of `typedef struct {`
 typedef struct TActor {
 /*0000*/  s16 rotation[3]; //why short?
@@ -28,21 +28,25 @@ typedef struct TActor {
 	void* ptr0x30;
 	UNK_TYPE_32 unk0x34;
 	struct TActor* linkedActor;
-	u8 unk0x3c[3];
-	UNK_TYPE_16 unk0x44;
-	UNK_TYPE_16 unk0x46;
-	void* ptr0x48;
-	UNK_TYPE_32 unk0x4c;
-	void* ptr0x50;
-	void* ptr0x54;
-	UNK_TYPE_32 unk0x58;
-	void* ptr0x5c;
-	void* ptr0x60;
-	void* ptr0x64;
-	void* ptr0x68;
-	void* ptr0x6c;
-	void* ptr0x70;
-	UNK_TYPE_32 unk0x74;
+        UNK_TYPE_16 unk0x3c;
+        UNK_TYPE_16 unk0x3e;
+        UNK_TYPE_16 unk0x40;
+        UNK_TYPE_16 unk0x42;
+        UNK_TYPE_32 unk0x44;
+        UNK_TYPE_32 unk0x48;
+        void* ptr0x4c;
+        void* ptr0x50;
+        void* ptr0x54;
+        void* ptr0x58;
+        void* ptr0x5c;
+        void* ptr0x60;
+        void* ptr0x64;
+        void* ptr0x68;
+        void* ptr0x6c;
+        void* ptr0x70;
+        void* ptr0x74;
+        void* ptr0x78;
+        void* ptr0x7c;
 	Vec3f positionMirror2; //gets copied twice.
 	Vec3f positionMirror3; //not sure why.
 	float unk0x98;
