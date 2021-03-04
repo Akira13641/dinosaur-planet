@@ -50,20 +50,16 @@ typedef struct TActor {
 	Vec3f positionMirror2; //gets copied twice.
 	Vec3f positionMirror3; //not sure why.
 	float unk0x98;
-	u8 unk0x9c;
-	u8 unk0x9d[3]; //aligning?
-	s16 unk0xa0;
-	u8 unk0xa2[11];
-	u8 unk0xad;
-	u8 unk0xae;
-	u8 unk0xaf;
-	s16 unk0xb0;
-	u8 unk0xb2[6];
+	float unk0x9c;
+	u8 someColor1[4];
+	float someVector[3];
+	u8 someColor2[4];
+	u8 someColor3[4];
 	void* CharData; //0x8c1+ struct, has various player data.
-	UNK_TYPE_32 unk0xbc;
-	UNK_TYPE_32 unk0xc0;
-	UNK_TYPE_32 unk0xc4;
-	void* ptr0xc8;
+	void* ptr0xbc;
+	void* ptr0xc0;
+	void* ptr0xc4;
+	struct TActor* uniqueWeapon;
 	void* ptr0xcc;
 } TActor; //may be bigger, will know when constructor is understood.
 
