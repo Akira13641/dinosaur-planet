@@ -52,7 +52,7 @@ typedef struct TActor {
 	float unk0x98;
 	float unk0x9c;
 	u8 animationFlags[4]; //element 3 toggles arm movement, element 4 toggles weapon sheathing
-	float some2dVector[2]; //no other data type is consistently meaningful in this position
+	float some2DVector[2]; //no other data type is consistently meaningful in this position
 	u8 someFlags1[4]; //almost certainly gameplay flags, changing some triggers "thread 3"
 	u8 someFlags2[4]; //almost certainly gameplay flags, changing some triggers "thread 3"
 	u8 someFlags3[4]; //almost certainly gameplay flags, changing some triggers "thread 3"
