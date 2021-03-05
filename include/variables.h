@@ -61,7 +61,7 @@ typedef struct TActor {
 	void* ptr0xc4;
 	struct TActor* uniqueWeapon; //always points to "staff" for Krystal and "sword" for Fox/Sabre
 	void* ptr0xcc;
-	void* ptr0xd0; //this down to 0xe4 are typically either all null or with a few RDRAM addresses
+	void* ptr0xd0; //this down to `0xe4` are typically either all null or with a few RDRAM addresses
 	void* ptr0xd4;
 	void* ptr0xd8;
 	void* ptr0xdc;
