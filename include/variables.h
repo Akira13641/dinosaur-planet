@@ -61,12 +61,12 @@ typedef struct TActor {
 	void* ptr0xc4;
 	struct TActor* uniqueWeapon; //always points to "staff" for Krystal and "sword" for Fox/Sabre
 	void* ptr0xcc;
-	void* ptr0xd0; //this down to `0xe4` are typically either all null or with a few RDRAM addresses
+	u8 someFlags4[4]; //typical values resemble those of the first three `someFlags`
 	void* ptr0xd4;
 	void* ptr0xd8;
-	void* ptr0xdc;
-	void* ptr0xe0;
-	void* ptr0xe4; //can't be larger than this - `0xe8` often amounts to the address held by `CharData`
+	u8 someFlags5[4]; //typical values resemble those of the first three `someFlags`
+	u32 largeBoolean; //seems to always be either `0x00000000` or `0x000000001`
+	void* ptr0xe4; //has to end here as `0xe8` often amounts to the address held by `CharData`
 } TActor;
 
 //found a 3-array of these, not sure what they're for.
