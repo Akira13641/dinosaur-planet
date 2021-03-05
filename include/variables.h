@@ -49,11 +49,10 @@ typedef struct TActor {
 	void* ptr0x7c;
 	Vec3f positionMirror2; //gets copied twice.
 	Vec3f positionMirror3; //not sure why.
-	float unk0x98;
-	float unk0x9c;
-	u8 animationFlags[4]; //3rd element toggles arm movement, 4th element toggles weapon sheathing
 	float some2DVector[2]; //no other data type is consistently meaningful in this position
-	u8 someFlags1[4]; //almost certainly gameplay flags, changing some triggers "thread 3"
+	u8 animationFlags[4]; //3rd element controls arm movement, 4th element controls weapon sheathing
+	float some2DVector2[2]; //no other data type is consistently meaningful in this position
+	u8 someFlags[4]; //almost certainly gameplay flags, changing some triggers "thread 3"
 	u8 someFlags2[4]; //almost certainly gameplay flags, changing some triggers "thread 3"
 	u8 someFlags3[4]; //almost certainly gameplay flags, changing some triggers "thread 3"
 	void* CharData; //0x8c1+ struct, has various player data.
@@ -62,7 +61,13 @@ typedef struct TActor {
 	void* ptr0xc4;
 	struct TActor* uniqueWeapon; //always points to "staff" for Krystal and "sword" for Fox/Sabre
 	void* ptr0xcc;
-} TActor; //may be bigger, will know when constructor is understood.
+	void* ptr0xd0; //this down to 0xe4 are typically either all null or with a few RDRAM addresses
+	void* ptr0xd4;
+	void* ptr0xd8;
+	void* ptr0xdc;
+	void* ptr0xe0;
+	void* ptr0xe4; //can't be larger than this - `0xe8` often amounts to the address held by `CharData`
+} TActor;
 
 //found a 3-array of these, not sure what they're for.
 struct Vec3_Int{
